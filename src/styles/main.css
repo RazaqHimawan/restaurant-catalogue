@@ -1,0 +1,422 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brown: #a75d5d;
+  --skin: #ffc3a1;
+  --white: #faf8f1;
+  --dark-brown: #3c2a21;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* 
+  NAVBAR
+*/
+
+.nav-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--brown);
+  min-height: 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-left: 0.75rem;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.hamburger__button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  background-color: var(--white);
+  border: 1px solid var(--skin);
+  border-radius: 10px;
+  font-size: 36px;
+  font-weight: 600;
+  margin-right: 0.75rem;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.hamburger__button:hover {
+  background-color: #e6e3db;
+}
+
+.hamburger__button:active {
+  background-color: #d1cec6;
+}
+
+.navbar-xl {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 300px;
+  background-color: var(--dark-brown);
+
+  position: absolute;
+  transform: translateX(-100vw);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar li {
+  margin: 0.75rem;
+  list-style-type: none;
+}
+
+.navbar li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.75rem 0;
+  min-width: 48px;
+  min-height: 48px;
+  color: var(--white);
+}
+
+.navbar li a:hover {
+  color: #c2c1bd;
+}
+
+.navbar li a:focus {
+  color: #c2c1bd;
+}
+
+.navbar.show {
+  transform: translateX(0);
+}
+
+.hero__img {
+  width: 100vw;
+}
+
+.title__container {
+  text-align: center;
+  margin: 1.75rem;
+  padding: 1rem 0;
+  border-top: 2px solid var(--brown);
+  border-bottom: 2px solid var(--brown);
+}
+
+/* 
+  MAIN
+*/
+
+.container {
+  margin: 1rem;
+}
+
+.title {
+  color: var(--dark-brown);
+}
+
+.resto__list {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+
+.resto__link {
+  margin: 1.75rem;
+}
+
+.resto__link:hover {
+  scale: calc(105%);
+  transition: scale 0.3s ease-in-out;
+}
+
+.resto {
+  position: relative;
+}
+
+.resto__img,
+.resto-detail__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.resto__cityname {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: var(--dark-brown);
+}
+
+.resto__name {
+  color: var(--dark-brown);
+}
+
+.resto__rating {
+  position: absolute;
+  bottom: 75px;
+  border-radius: 0 10px 10px 0;
+  padding: 0.3rem 0.5rem;
+  background-color: var(--white);
+  color: var(--dark-brown);
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid var(--dark-brown);
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px var(--dark-brown);
+}
+
+/* 
+  FOOTER
+*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--skin);
+  color: var(--dark-brown);
+  padding: 1rem;
+}
+
+/* 
+  SKIP
+*/
+
+.skip {
+  position: absolute;
+  top: -150px;
+  left: 0;
+  padding: 1rem;
+  background-color: var(--dark-brown);
+  color: var(--white);
+  z-index: 100;
+}
+
+.skip:focus {
+  top: 0;
+}
+
+/* 
+  DETAIL
+*/
+
+.resto-detail__container {
+  background-color: var(--dark-brown);
+  color: var(--white);
+}
+
+.resto-detail__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resto-detail__table tr {
+  border-bottom: 1px solid var(--white);
+}
+
+.resto-detail__table th,
+.resto-detail__table td {
+  padding: 1rem;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.resto-detail__menu,
+.resto-detail__desc__container {
+  background-color: var(--dark-brown);
+  color: var(--white);
+}
+
+.resto-detail__title__container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--skin);
+}
+
+.resto-detail__menu__title {
+  padding: 2rem;
+  color: var(--dark-brown);
+}
+
+.resto-detail__foods,
+.resto-detail__drinks {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.resto-detail__foods > h3,
+.resto-detail__drinks > h3 {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 400;
+  padding: 0.5rem;
+}
+
+.resto-detail__desc {
+  line-height: 1.5em;
+  font-size: 1.2em;
+  padding: 1rem;
+  text-align: justify;
+}
+
+.resto-detail__reviews__item {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.resto-detail__reviews__namedate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--dark-brown);
+}
+
+.resto-detail__reviews__namedate > h3 {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.resto-detail__reviews__item > p {
+  line-height: 1.5em;
+}
+
+/*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b42929;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.nofavorite {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.75rem;
+  color: #d1d1d1;
+  text-align: center;
+}
+
+/* 
+  Review Form
+*/
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.review-form > label[for='name'],
+.review-form > label[for='review'] {
+  margin-left: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.review-form > input[type='text'] {
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  padding: 0.5rem;
+  min-height: 48px;
+  font-size: 18px;
+}
+
+textarea {
+  resize: none;
+  margin-bottom: 1rem;
+  height: 150px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.submit {
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 18px;
+  border: 1px solid var(--dark-brown);
+  border-radius: 10px;
+  background-color: var(--white);
+}
+
+.submit:hover {
+  background-color: #d1d1d1;
+}
+
+.submit:active {
+  background-color: #c2c1bd;
+}
+
+.submit:focus {
+  background-color: #d1d1d1;
+}
+
+/* 
+  Spinner
+*/
+
+.loader {
+  margin: 1rem auto;
+  border: 16px solid var(--skin);
+  border-radius: 50%;
+  border-top: 16px solid var(--brown);
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 
+  Error message
+*/
+
+.err-message {
+  text-align: center;
+  padding: 4rem;
+}

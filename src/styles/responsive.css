@@ -1,0 +1,157 @@
+@media screen and (min-width: 800px) {
+  .hamburger__button {
+    display: none;
+  }
+
+  .nav-head {
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar-xl {
+    display: flex;
+  }
+
+  .navbar-xl li {
+    margin: 0 1.5rem;
+    list-style-type: none;
+  }
+
+  .navbar-xl li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 48px;
+    min-height: 48px;
+    font-size: 18px;
+    color: var(--white);
+  }
+
+  .navbar-xl li a:hover {
+    color: #c2c1bd;
+  }
+
+  .navbar-xl li a:focus {
+    color: #c2c1bd;
+  }
+
+  .resto__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resto__link {
+    width: 350px;
+
+    margin: 0.5rem;
+  }
+
+  .resto__cityname {
+    flex-direction: column;
+  }
+
+  .resto__rating {
+    bottom: 100px;
+  }
+
+  .resto-detail__foods,
+  .resto-detail__drinks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resto-detail__reviews__item {
+    margin: 1rem auto;
+    width: 800px;
+  }
+
+  .review-form {
+    margin: 1rem auto;
+    width: 800px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+  }
+  .hero__img {
+    width: 1000px;
+  }
+
+  .resto__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .resto-detail__container {
+    display: flex;
+    padding: 1.75rem;
+  }
+
+  .resto-detail__img {
+    width: 500px;
+  }
+
+  .resto-detail__table {
+    margin: 0 1rem;
+  }
+
+  .resto-detail__menu {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .resto-detail__foods__container,
+  .resto-detail__drinks__container {
+    padding: 2rem;
+  }
+
+  .resto-detail__foods > h3,
+  .resto-detail__drinks > h3 {
+    margin: 1rem;
+  }
+
+  .resto-detail__desc {
+    width: 800px;
+    margin: auto;
+  }
+
+  .resto-detail__reviews {
+    width: 800px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .resto__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .resto-detail__img {
+    width: 1000px;
+  }
+
+  .resto-detail__table {
+    margin: 1rem;
+  }
+
+  .resto-detail__foods,
+  .resto-detail__drinks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .resto-detail__desc {
+    width: 1200px;
+    margin: auto;
+  }
+
+  .resto-detail__reviews {
+    width: 1200px;
+    margin: auto;
+  }
+}
